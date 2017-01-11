@@ -1004,7 +1004,7 @@ module.exports = ".news-content .header-image {\n  background-size: cover; }\n"
 /***/ 897:
 /***/ function(module, exports) {
 
-module.exports = ".player-card-container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap; }\n  .player-card-container md-card {\n    width: 215px;\n    margin: 1rem; }\n  .player-card-container .header-image {\n    background-size: cover; }\n"
+module.exports = ".player-card-container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap; }\n  .player-card-container md-card {\n    margin: 1rem; }\n  .player-card-container .header-image {\n    background-size: cover; }\n"
 
 /***/ },
 
@@ -1053,7 +1053,7 @@ module.exports = "<div class=\"news-content\">\n  <h1>News</h1>\n\n  <md-card *n
 /***/ 904:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"team-content\">\n  <h1>League of Legends Team</h1>\n\n  <div class=\"player-card-container\">\n    <md-card *ngFor=\"let player of this.players\">\n      <md-card-header>\n        <div md-card-avatar class=\"header-image\"\n             [style.background-image]=\"'url(' + player.img + ')'\">\n        </div>\n        <md-card-title>{{player.name}}</md-card-title>\n      </md-card-header>\n      <img md-card-image [src]=\"player.img\">\n    </md-card>\n  </div>\n</div>\n"
+module.exports = "<div class=\"team-content\">\n  <h1>League of Legends Team</h1>\n\n  <div class=\"player-card-container\"\n       fxLayout=\"row\"\n       fxLayoutAlign=\"space-between center\">\n    <div fxFlex=\"33%\" fxFlex.xs=\"100%\" *ngFor=\"let player of this.players\">\n      <md-card>\n        <md-card-header>\n          <div md-card-avatar class=\"header-image\"\n               [style.background-image]=\"'url(' + player.img + ')'\">\n          </div>\n          <md-card-title>{{player.name}}</md-card-title>\n        </md-card-header>\n        <img md-card-image [src]=\"player.img\">\n      </md-card>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }
 
